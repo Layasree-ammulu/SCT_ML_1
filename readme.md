@@ -10,99 +10,123 @@ The model learns the relationship between house characteristics and their sale p
 
 The objective of this project is to develop a machine learning model that can predict the sale price of a house based on important property features.
 
-The model uses features such as:
+The model uses the following features:
 
-- GrLivArea - Above-ground living area
-- Bedroom - Number of bedrooms
-- FullBath - Number of full bathrooms
+- **GrLivArea** - Above-ground living area
+- **Bedroom** - Number of bedrooms
+- **FullBath** - Number of full bathrooms
 
 ## Dataset
 
 The project uses a housing dataset containing information about residential properties and their sale prices.
 
-The target variable is:
-
-```text
-SalePrice
+### Target Variable
 
 SalePrice
 
-The selected input features are:
+### Input Features
 
-GrLivArea
-Bedroom
-FullBath
+- GrLivArea
+- Bedroom
+- FullBath
 
-The dataset is used locally and is not included in the repository if it is large or provided separately.
+The dataset used for training is provided as `train.csv`.
 
-Machine Learning Algorithm
-Linear Regression
+## Machine Learning Algorithm
 
-Linear Regression is a supervised machine learning algorithm used to predict a continuous numerical value.
+### Linear Regression
+
+Linear Regression is a supervised machine learning algorithm used to predict continuous numerical values.
 
 In this project, Linear Regression learns the relationship between the selected house features and the house sale price.
 
-The model can then use these learned relationships to predict the price of an unseen house.
+The learned relationship is then used to predict prices for unseen houses.
 
-Methodology
+## Methodology
 
 The project follows these steps:
 
-Load the housing dataset
-Explore the dataset
-Select relevant features
-Select the target variable
-Handle the required data preprocessing
-Split the dataset into training and testing sets
-Train the Linear Regression model
-Make predictions on the test data
-Evaluate the model
-Visualize the prediction results
-Technologies Used
-Python
-Pandas
-NumPy
-Scikit-learn
-Matplotlib
-Model Evaluation
+1. Load the housing dataset
+2. Explore the dataset
+3. Select relevant features
+4. Select the target variable
+5. Perform required data preprocessing
+6. Split the dataset into training and testing sets
+7. Train the Linear Regression model
+8. Make predictions on the test data
+9. Evaluate the model
+10. Visualize the prediction results
 
-The trained model is evaluated using regression performance metrics such as:
+## Technologies Used
 
-Mean Absolute Error (MAE)
-Mean Squared Error (MSE)
-R² Score
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
 
-These metrics help measure how accurately the model predicts house prices.
+## Model Evaluation
 
-Project Structure
+The trained model is evaluated using the following regression metrics:
+
+- **Mean Absolute Error (MAE)**
+- **Mean Squared Error (MSE)**
+- **R² Score**
+
+These metrics help measure the performance of the Linear Regression model.
+
+## Visualizations
+
+The project generates visualizations to understand the relationship between house features and prices and to compare actual prices with predicted prices.
+
+Generated plots include:
+
+- Square Footage vs Price
+- Bedrooms vs Price
+- Bathrooms vs Price
+- Actual vs Predicted Prices
+
+## Project Structure
+
+```text
 SCT_ML_1/
 │
-├── house_price_prediction.py
-├── dataset.csv
-└── README.md
+├── house_prediction.py
+├── train.csv
+├── house_price_predictions.csv
+├── actual_vs_predicted.png
+├── square_footage_vs_price.png
+├── bedrooms_vs_price.png
+├── bathrooms_vs_price.png
+├── output.txt
+├── requirements.txt
+└── readme.md
+## How to Run
 
-The dataset file may be excluded from GitHub if required because of its size or licensing restrictions.
+### 1. Install the required libraries
 
-How to Run
+```bash
+pip install -r requirements.txt
+```
 
-Install the required libraries:
+### 2. Run the Python program
 
-pip install pandas numpy scikit-learn matplotlib
+```bash
+python house_prediction.py
+```
 
-Run the Python program:
+The program loads the dataset, trains the Linear Regression model, predicts house prices, evaluates the model, and generates visualization files.
 
-python house_price_prediction.py
+## Result
 
-The program loads the dataset, trains the Linear Regression model, predicts house prices, and displays the evaluation results.
+The Linear Regression model predicts house prices based on selected property features.
 
-Result
+The model performance is evaluated using MAE, MSE, and R² Score, along with visualizations comparing actual and predicted prices.
 
-The trained Linear Regression model predicts house prices based on the selected property features.
+## Internship Task
 
-The model performance is evaluated using regression metrics and visualization of the prediction results.
+**Organization:** SkillCraft Technology
 
-Internship Task
+**Program:** Machine Learning Internship
 
-SkillCraft Technology — Machine Learning Internship
-
-Task 1: Implement a Linear Regression model to predict house prices based on selected features.
+**Task 1:** Implement a Linear Regression model to predict house prices based on selected features.
