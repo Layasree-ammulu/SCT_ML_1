@@ -101,10 +101,7 @@ SCT_ML_1/
 ├── output.txt
 ├── requirements.txt
 └── readme.md
-
-
-
-
+```
 ## How to Run
 
 ### 1. Install the required libraries
